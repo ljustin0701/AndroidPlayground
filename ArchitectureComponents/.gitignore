@@ -1,4 +1,4 @@
-# Built application files
+# Application files
 *.apk
 *.ap_
 
@@ -48,4 +48,4 @@ google-services.json
 # Freeline
 freeline.py
 freeline/
-freeline_project_description.json
+freeline_project_description.json*.iml

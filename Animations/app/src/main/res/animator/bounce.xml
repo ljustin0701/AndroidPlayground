@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="together"
+    android:shareInterpolator="false"
+    android:interpolator="@android:interpolator/accelerate_quint">
+
+    <objectAnimator
+        android:propertyName="scaleX"
+        android:valueTo="1.8"
+        android:repeatCount="1"
+        android:repeatMode="reverse"
+        android:valueType="floatType"/>
+
+    <objectAnimator
+        android:propertyName="scaleY"
+        android:valueTo="1.8"
+        android:repeatMode="reverse"
+        android:repeatCount="1"
+        android:valueType="floatType"/>
+
+</set>
