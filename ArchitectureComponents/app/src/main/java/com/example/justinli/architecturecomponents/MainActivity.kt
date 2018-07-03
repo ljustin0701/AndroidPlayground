@@ -1,5 +1,6 @@
 package com.example.justinli.architecturecomponents
 
+import android.arch.lifecycle.LifecycleOwner
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -8,7 +9,7 @@ import android.view.animation.AnimationUtils
 import android.widget.EditText
 import android.widget.TextSwitcher
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), LifecycleOwner {
 
     private lateinit var mainViewModel : MainViewModel
     private lateinit var text : TextSwitcher
@@ -19,7 +20,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         text = findViewById(R.id.text)
         editText = findViewById(R.id.edit_text)
+    }
 
+    override fun onStart() {
+        super.onStart()
         text.inAnimation = AnimationUtils.loadAnimation(this, android.R.anim.fade_in)
         text.outAnimation = AnimationUtils.loadAnimation(this, android.R.anim.fade_out)
 
